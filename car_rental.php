@@ -1,11 +1,5 @@
 <?php
 
-/*****************************************
- * Title: Back-end Developer Challenge 1
- * Submitted By: Ricardo Zapanta Jr.
- * Date: June 03, 2024
-******************************************/
-
 //My car rental TABLE
 $car_rental_json=array(
     [
