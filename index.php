@@ -32,7 +32,7 @@ $car_rental_json=array(
 $no_of_seats = readline("Please input number (seat): "); 
 
 // Init global variables
-$prev_total_cost = null;
+$cheapest_cost = null;
 $my_stored_values = [];
 
 // loop car rental json
@@ -44,11 +44,11 @@ foreach($car_rental_json as $car) {
     //get total cost
     $total_cost = $multiplier * $cost;
 
-    //check if current total cost is lower than previous
-    if($prev_total_cost == null || $total_cost < $prev_total_cost){
+    //check if current total cost is the cheapest
+    if($cheapest_cost == null || $total_cost < $cheapest_cost){
         //update previous value and stored value
-        $prev_total_cost = $total_cost;
-        $my_stored_values = array($car["symbol"], $multiplier, $prev_total_cost);
+        $cheapest_cost = $total_cost;
+        $my_stored_values = array($car["symbol"], $multiplier, $cheapest_cost);
     }else{
         continue;
     }
